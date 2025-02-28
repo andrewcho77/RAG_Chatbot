@@ -1,4 +1,5 @@
 import pandas as pd
+import uuid
 
 
 def parse_x_of_y_str(value):
@@ -22,6 +23,10 @@ def parse_time(value):
         return minutes, seconds
     except:
         return None, None
+
+
+def create_uuid(row):
+    return str(uuid.uuid4())
 
 
 def create_custom_numeric_cols(dataframe):
@@ -133,6 +138,12 @@ def preprocess_stats():
             "REV.": pd.to_numeric,
         },
     )
+
+    # Add UUID Column here
+    ufc_fight_stats["UUID"] = ufc_fight_stats.apply(create_uuid, axis=1)
+
+    uuid_col = ufc_fight_stats.pop("UUID")
+    ufc_fight_stats.insert(0, "UUID", uuid_col)
 
     ufc_fight_stats = create_custom_numeric_cols(ufc_fight_stats)
     ufc_fight_stats["text"] = ufc_fight_stats.apply(create_stat_summary, axis=1)
