@@ -1,5 +1,5 @@
 import streamlit as st
-from src import query_pinecone, format_context, generate_answer
+from core import query_pinecone, format_context, generate_answer
 
 st.title("UFC Chatbot")
 
