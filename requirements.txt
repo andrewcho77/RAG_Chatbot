@@ -42,7 +42,6 @@ langchain-pinecone==0.2.2
 langchain-tests==0.3.8
 langchain-text-splitters==0.3.5
 langsmith==0.2.10
-libmambapy==1.5.8
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 mdurl==0.1.2
