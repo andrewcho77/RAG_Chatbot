@@ -1,0 +1,19 @@
+How can we improve the quality of our RAG?
+
+Certain queries identify cracks in our data quality. For example,
+- "What's the most significant strikes that Islam Makhachev had in a fight?"
+
+Since the UFC fight stats dataset is set up so each record corresponds to a fighter's round in a given fight, 
+asking questions about the "fight" put the onus of rolling up round-specific rows on the LLM.
+
+I would hypothesize that a dataset based around a "fight" model and/or a "fighter" model would yield
+much better LLM responses, since it wouldn't have to worry about aggregating data across rounds - that would
+be handled in pre-processing.
+
+"fight" model:
+- similar to the existing dataset, except we would flatten the round-by-round data into one fight-level row
+
+"fighter" model:
+Sample row: {
+    "Henry Cejudo": "One big paragraph that summarizes all of the particular fighters fights"
+}
