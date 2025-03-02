@@ -173,3 +173,6 @@ cython_debug/
 .DS_Store
 
 .vscode/*
+
+/data/ufc_fight_stats_cleaned.csv
+/data/ufc_fight_stats_cleaned_with_embeddings.csv
