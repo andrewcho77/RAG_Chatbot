@@ -1,8 +1,8 @@
 import os
 import json
 import pandas as pd
-from preprocess import preprocess_stats
-from embeddings import create_embeddings_col
+from src.preprocess import preprocess_stats
+from src.embeddings import create_embeddings_col
 
 STATS_CLEANED_DATA_PATH = "./data/ufc_fight_stats_cleaned.csv"
 STATS_CLEANED_WITH_EMBEDDINGS_DATA_PATH = (

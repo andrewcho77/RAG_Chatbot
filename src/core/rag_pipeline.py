@@ -1,8 +1,7 @@
 import openai
-import json
 from typing import List
-from embeddings import fetch_openai_embeddings
-from pinecone_client import PineconeClient
+from src.embeddings import fetch_openai_embeddings
+from src.core.pinecone_client import PineconeClient
 
 
 def query_pinecone(query: str, top_k: int) -> List:

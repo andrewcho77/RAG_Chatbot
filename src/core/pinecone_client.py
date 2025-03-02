@@ -1,6 +1,6 @@
 from pinecone import Pinecone, ServerlessSpec
 from tqdm import tqdm
-from config import (
+from src.core.config import (
     PINECONE_API_KEY,
     PINECONE_CLOUD,
     PINECONE_REGION,
@@ -8,7 +8,7 @@ from config import (
     OPENAI_EMBEDDINGS_DIMENSION,
 )
 from typing import List
-from core.data_loader import save_embeddings_checkpoint
+from src.core.data_loader import save_embeddings_checkpoint
 
 
 class PineconeClient:
